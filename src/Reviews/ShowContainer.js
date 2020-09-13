@@ -1,25 +1,25 @@
 import React from "react";
 import axios from "axios";
-import "./App.css";
+import ShowComponent from "./ShowComponent"
 
 class App extends React.Component {
-  state = { professors: [] };
+  state = { review: [] };
 
   componentDidMount() {
     axios.get("http://localhost:3000/reviews/1").then((res) => {
-      const professors = res.data;
+      const review = res.data;
       console.log(res.data)
-      this.setState({ professors });
+      this.setState({ review });
     });
   }
 
   render() {
     return (
-      <ul>
-        {this.state.professors.map((professor) => (
-          <li>{professor.name}</li>
-        ))}
-      </ul>
+      <div>
+        <ShowComponent
+          data={this.state}
+        />
+      </div>
     );
   }
 }
