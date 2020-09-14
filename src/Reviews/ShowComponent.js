@@ -7,7 +7,7 @@ function ShowComponent(props) {
     <div>
       <h1>Reviews Show</h1>
       {props.data.review.map((review) => (
-        <div>
+        <div key={review.id}>
           <p>Name: {review.name}</p>
           <p>School: {review.school}</p>
           <p>Department: {review.department}</p>
