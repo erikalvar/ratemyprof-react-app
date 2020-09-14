@@ -9,7 +9,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {/* <IndexContainer />
+        <IndexContainer />
         <br />
         <br />
         <br />
@@ -25,7 +25,7 @@ class App extends React.Component {
         <DestroyContainer />
         <br />
         <br />
-        <br /> */}
+        <br />
         <UpdateContainer />
       </div>
     );
