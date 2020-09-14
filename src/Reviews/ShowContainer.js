@@ -1,14 +1,14 @@
 import React from "react";
 import axios from "axios";
-import ShowComponent from "./ShowComponent"
+import ShowComponent from "./ShowComponent";
 
 class App extends React.Component {
   state = { review: [] };
 
   componentDidMount() {
-    axios.get("http://localhost:3000/reviews/1").then((res) => {
+    axios.get("http://localhost:3000/api/reviews/1").then((res) => {
       const review = res.data;
-      console.log(res.data)
+      console.log(res.data);
       this.setState({ review });
     });
   }
@@ -16,9 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <ShowComponent
-          data={this.state}
-        />
+        <ShowComponent data={this.state} />
       </div>
     );
   }
