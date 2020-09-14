@@ -24,7 +24,7 @@ export default class CreateProfContainer extends React.Component {
     event.preventDefault();
 
     axios
-      .post("http://localhost:3000/professors", {
+      .post("http://localhost:3000/api/professors", {
         name: this.state.name,
         school: this.state.school,
         title: this.state.title,

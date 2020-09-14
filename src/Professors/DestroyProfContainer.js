@@ -14,7 +14,7 @@ export default class DestroyContainer extends React.Component {
     event.preventDefault();
 
     axios
-      .delete(`http://localhost:3000/professors/${this.state.id}`)
+      .delete(`http://localhost:3000/api/professors/${this.state.id}`)
       .then((res) => {
         console.log(res);
         console.log(res.data);
