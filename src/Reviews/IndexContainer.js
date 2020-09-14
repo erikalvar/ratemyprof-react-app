@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import IndexComponent from "./IndexComponent"
 
-
 class IndexContainer extends React.Component {
   state = { reviews: [] };
 
