@@ -5,7 +5,7 @@ function IndexProfComponent(props) {
     <div>
       <h1>Professor Index</h1>
       {props.data.professors.map((professor) => (
-        <div>
+        <div key={professor.id}>
           <p>Name: {professor.name}</p>
           <p>School: {professor.school}</p>
           <p>Title: {professor.title}</p>
