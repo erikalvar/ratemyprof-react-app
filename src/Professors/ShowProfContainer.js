@@ -6,7 +6,7 @@ class App extends React.Component {
   state = { professor: [] };
 
   componentDidMount() {
-    axios.get("http://localhost:3000/professors/1").then((res) => {
+    axios.get("http://localhost:3000/api/professors/1").then((res) => {
       const professor = res.data;
       console.log(res.data);
       this.setState({ professor });

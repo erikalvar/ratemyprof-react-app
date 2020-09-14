@@ -1,14 +1,14 @@
 import React from "react";
 import axios from "axios";
-import IndexComponent from "./IndexComponent"
+import IndexComponent from "./IndexComponent";
 
 class IndexContainer extends React.Component {
   state = { reviews: [] };
 
   componentDidMount() {
-    axios.get("http://localhost:3000/reviews").then((res) => {
+    axios.get("http://localhost:3000/api/reviews").then((res) => {
       const reviews = res.data;
-      console.log(res.data)
+      console.log(res.data);
       this.setState({ reviews });
     });
   }
@@ -16,9 +16,7 @@ class IndexContainer extends React.Component {
   render() {
     return (
       <div>
-        <IndexComponent
-          data={this.state}
-        />
+        <IndexComponent data={this.state} />
       </div>
     );
   }

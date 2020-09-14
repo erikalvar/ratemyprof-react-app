@@ -1,24 +1,25 @@
-import React from 'react';
-import axios from 'axios';
+import React from "react";
+import axios from "axios";
 
 export default class DestroyContainer extends React.Component {
   state = {
-    id: '',
-  }
+    id: "",
+  };
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({ id: event.target.value });
-  }
+  };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
 
-    axios.delete(`http://localhost:3000/reviews/${this.state.id}`)
-      .then(res => {
+    axios
+      .delete(`http://localhost:3000/api/reviews/${this.state.id}`)
+      .then((res) => {
         console.log(res);
         console.log(res.data);
-      })
-  }
+      });
+  };
 
   render() {
     return (
@@ -31,6 +32,6 @@ export default class DestroyContainer extends React.Component {
           <button type="submit">Delete</button>
         </form>
       </div>
-    )
+    );
   }
 }

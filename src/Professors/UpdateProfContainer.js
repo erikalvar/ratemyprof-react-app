@@ -14,7 +14,7 @@ export default class UpdateProfContainer extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:3000/professors/1").then((res) => {
+    axios.get("http://localhost:3000/api/professors/1").then((res) => {
       const professor = res.data;
       console.log(professor);
       this.setState({ professor });
@@ -32,7 +32,7 @@ export default class UpdateProfContainer extends React.Component {
     event.preventDefault();
 
     axios
-      .put("http://localhost:3000/professors/1", {
+      .put("http://localhost:3000/api/professors/1", {
         name: this.state.name,
         school: this.state.school,
         title: this.state.title,
